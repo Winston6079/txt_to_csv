@@ -21,12 +21,12 @@ click on each column when writing both words (meaning writing is more fluid in t
 After the conversion a csv file will be created, that's the one you import.
 keep the folder that contains the script only with said script, and any other folder that's the language that you are learning.
 
-For example: 
-txt_to_csv (folder) ->  
--converter.py  
--french (folder)  
-  -> class1.txt 
-  -> class2.txt 
--spanish(folder)  
+For example:      
+txt_to_csv (folder) ->  <br>
+-converter.py  <br>
+-french (folder)  <br>
+  -> class1.txt <br>
+  -> class2.txt <br>
+-spanish(folder)  <br>
 
 Only inside of these folders you add the txt.
