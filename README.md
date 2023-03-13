@@ -1,7 +1,7 @@
 # txt_to_csv
 This program is meant to copy txt files to a csv file that can be imported to anki.
 
-the txt file must be done in the following format: the word in the foreign language to the left - translation to the right, for example:
+The txt file must be done in the following format: the word in the foreign language to the left - translation to the right, for example:
 
 hola - hello
 uno - one
