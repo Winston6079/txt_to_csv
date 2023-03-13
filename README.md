@@ -16,7 +16,7 @@ I've used it, done some tests and hasn't failed me yet. Meaning it does what it'
 
 Why would I write on a txt file the words that I want to remember and then import to anki, if instead I can directly write it on a csv file?
 - It's more comfortable and faster, at least in my experience. A txt file is lighter to open, there's no need to pay for it (like Microsoft Excel), you don't need to
-cick on each column when writing both words (meaning writing is more fluid in the txt file).
+click on each column when writing both words (meaning writing is more fluid in the txt file).
 
 After the conversion a csv file will be created, that's the one you import.
 keep the folder that contains the script only with said script, and any other folder that's the language that you are learning.
