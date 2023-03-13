@@ -3,7 +3,7 @@ This program is meant to copy txt files to a csv file that can be imported to an
 
 The txt file must be done in the following format: the word in the foreign language to the left - translation to the right, for example:
 
-hola - hello
+hola - hello \n
 uno - one
 
 The script then will create a csv file where on the A column you will have all the foreign words, and to the right on the B column all the translations. 
