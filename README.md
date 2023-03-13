@@ -25,8 +25,8 @@ For example:
 txt_to_csv (folder) ->  <br>
 &nbsp;-converter.py  <br>
 &nbsp;-french (folder)  <br>
-&nbsp;&nbsp; -> class1.txt <br>
-&nbsp;&nbsp; -> class2.txt <br>
+&nbsp;&nbsp;&nbsp; -> class1.txt <br>
+&nbsp;&nbsp;&nbsp; -> class2.txt <br>
 &nbsp;-spanish(folder)  <br>
 
 Only inside of these folders you add the txt.
