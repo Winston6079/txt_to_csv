@@ -23,10 +23,10 @@ keep the folder that contains the script only with said script, and any other fo
 
 For example:      
 txt_to_csv (folder) ->  <br>
--converter.py  <br>
--french (folder)  <br>
-  -> class1.txt <br>
-  -> class2.txt <br>
--spanish(folder)  <br>
+<pre>-converter.py  <br>
+<pre>-french (folder)  <br>
+ <pre><pre>-> class1.txt <br>
+ <pre><pre>-> class2.txt <br>
+<pre>-spanish(folder)  <br>
 
 Only inside of these folders you add the txt.
