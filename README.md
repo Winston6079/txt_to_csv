@@ -21,7 +21,7 @@ click on each column when writing both words (meaning writing is more fluid in t
 After the conversion a csv file will be created, that's the one you import.
 keep the folder that contains the script only with said script, and any other folder that's the language that you are learning.
 
-For example:      
+For example:  <br>     
 txt_to_csv (folder) ->  <br>
 &nbsp;-converter.py  <br>
 &nbsp;-french (folder)  <br>
@@ -31,13 +31,13 @@ txt_to_csv (folder) ->  <br>
 
 Only inside of these folders you add the txt.
 
-At the end of the text, if you want to add comments, write freely, etc., just write this symbol: ~ and the rest will be ignored.
-For example:
+At the end of the text, if you want to add comments, write freely, etc., just write this symbol: ~ and the rest will be ignored. <br>
+For example: <br>
 
-hola - hello  
-uno - one   
+hola - hello   <br>
+uno - one    <br>
 
-~
+~  <br>
 This text is ignored. <br>
 This text is ignored. <br>
 This text - won't be converted. <br>
@@ -51,4 +51,4 @@ video: https://  <br>
 hola - hello   <br>
 uno - one    <br>
 
-Or after the ~ , it's the same and it won't be converted. 
+Or after the ~ , it's the same and it won't be converted.  <br>
