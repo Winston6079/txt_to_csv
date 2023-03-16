@@ -30,3 +30,25 @@ txt_to_csv (folder) ->  <br>
 &nbsp;-spanish(folder)  <br>
 
 Only inside of these folders you add the txt.
+
+At the end of the text, if you want to add comments, write freely, etc., just write this symbol: ~ and the rest will be ignored.
+For example:
+
+hola - hello  
+uno - one   
+
+~
+This text is ignored.
+This text is ignored.
+This text - won't be converted.
+...
+
+You can also add the link at the top if you want, that takes you to the resource that you are currently learning.
+For example:
+
+video: https://
+
+hola - hello  
+uno - one   
+
+Or after the ~ , it's the same and it won't be converted.
