@@ -38,17 +38,17 @@ hola - hello
 uno - one   
 
 ~
-This text is ignored.
-This text is ignored.
-This text - won't be converted.
+This text is ignored. <br>
+This text is ignored. <br>
+This text - won't be converted. <br>
 ...
 
-You can also add the link at the top if you want, that takes you to the resource that you are currently learning.
-For example:
+You can also add the link at the top if you want, that takes you to the resource that you are currently learning. <br>
+For example: <br>
 
-video: https://
+video: https://  <br>
 
-hola - hello  
-uno - one   
+hola - hello   <br>
+uno - one    <br>
 
-Or after the ~ , it's the same and it won't be converted.
+Or after the ~ , it's the same and it won't be converted. 
