@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-import csv, os, re
+import csv, os, re, sys
 
+path_root = os.getcwd()
 path_idm = os.getcwd()
 questions = []
 answers = []
@@ -17,10 +18,10 @@ def check_exists_folders():
     ask_create((qnt_files-1))
 
 def ask_create(qnt_files):
-  print("do you want to add another language?\n y | n")
+  print("Do you want to add a language?\n y | n")
   user_ans = input('-> ')
   if user_ans == 'y':
-    print("how many?")
+    print("How many?")
     new_lang_qnt = input("-> ")
     new_lang_qnt = int(new_lang_qnt)
     create_folders(new_lang_qnt)
@@ -28,13 +29,13 @@ def ask_create(qnt_files):
     list_langs(qnt_files)
 
 def how_many_langs():
-  print("how many languages are currently learning?")
+  print("How many languages are currently learning?")
   num_of_langs = input("-> ")
   num_of_langs = int(num_of_langs)
   create_folders(num_of_langs)
 
 def create_folders(qnt_folders):
-  print("name the language(s) you are learning:")
+  print("Name the language(s) you are learning:")
   x = 1
   while x <= qnt_folders: 
     name_lang = input('-> ')
@@ -53,10 +54,14 @@ def list_langs(qnt_folders):
 
 def select_language():
   global path_idm
-  print("\nwrite the name")
+  print("\nWrite the name")
   sel_lang = input("-> ")
-  path_idm = path_idm+"\\"+sel_lang
-  select_file()
+  if not os.path.exists(path_root+"\\"+sel_lang):
+    print("Enter a valid name.")
+    select_language()
+  else:
+    path_idm = path_root+"\\"+sel_lang
+    sub_menu()
 
 def print_cwd():
   cur_dir = os.scandir(path_idm)
@@ -74,15 +79,20 @@ def select_file():
     print(files)
   if files == 0:
     print("There are no files yet. Create them and you will be able to convert them.")
+    sub_menu()
   else:
     print("")
     print("Which file(s) do you want to open?")
     print_cwd()
+    print("\n\nTo go back write 'b'")
     sel_file = input("-> ")
+    if sel_file == 'b':
+      sub_menu()
     sel_file = path_idm+"\\"+sel_file
     print(sel_file)
     process_txt(sel_file)
     copy_to_csv(sel_file)
+    sub_menu()
 
 def process_txt(sel_file):
   with open(sel_file, 'r', encoding='utf-8') as bloc:
@@ -117,6 +127,7 @@ def copy_to_csv(sel_file):
   
   while call_again:
     ask_continue()
+  
 
 def ask_continue():
   global call_again, path_idm, questions, answers
@@ -130,7 +141,79 @@ def ask_continue():
   elif answer == "n":
     answer = False
     call_again = answer
+    path_idm = path_root
   else:
     ask_continue()
 
-check_exists_folders()
+def create_file():
+  print("Do you want to create a file?\n y | n")
+  ans = input("-> ")
+  if ans == "y":
+    print("How do you want to call it?")
+    name_file = input("-> ")
+    if os.path.exists(path_idm+'\\'+name_file+'.txt'):
+      print("The file already exists.")
+      create_file()
+    else:
+      new_file = open(path_idm+'\\'+name_file+".txt", "w")
+      new_file.close()
+      print("The file was succesfully created\n")
+      create_file()
+  elif ans == "n":
+      sub_menu()
+  else:
+    print("Enter a valid answer.")
+    create_file()
+
+# not finished
+def main_menu():
+  print("""
+  1) Create language folder
+  2) Select language folder
+  3) Exit
+  
+  Select a number:
+  """)
+  answer = input("-> ")
+
+  if answer == "1":
+    create_folders(1)
+    main_menu()
+  elif answer == "2":
+    print("For which language?")
+    select_language()
+  elif answer == "3":
+    print("Bye!")
+    sys.exit(0)
+  else:
+    print("Write a valid answer.")  
+    main_menu()
+
+
+def sub_menu():
+  print("""
+  1) Create file
+  2) Process file
+  3) Go back to the main menu
+  4) Exit
+  """)
+
+  answer = input("-> ")
+
+  if answer == "1":
+    create_file()
+  elif answer == "2":
+    select_file()
+  elif answer == "3":
+    path_idm = path_root
+    main_menu()
+  elif answer == "4":
+    print("Bye!")
+    sys.exit(0)
+  else:
+    print("Write a valid answer.")  
+    sub_menu()
+
+
+
+main_menu()
