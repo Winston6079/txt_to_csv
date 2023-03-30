@@ -76,7 +76,7 @@ def select_file():
   files=0
   for entry in cur_dir:
     files += 1
-    print(files)
+    
   if files == 0:
     print("There are no files yet. Create them and you will be able to convert them.")
     sub_menu()
@@ -112,6 +112,7 @@ def process_txt(sel_file):
   bloc.close()
 
 def copy_to_csv(sel_file):
+  global questions, answers
   sel_file = sel_file.replace('.txt', '.csv')
   with open(sel_file, 'w', encoding='utf-8', newline='') as csv_file:
     writer = csv.writer(csv_file)
@@ -121,6 +122,8 @@ def copy_to_csv(sel_file):
       writer.writerow(entry)
   
   csv_file.close()
+  questions = []
+  answers = []
   print("Success\nDone\n")
   print("Do you want to process another file?")
   print("y\nn")
