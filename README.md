@@ -51,4 +51,7 @@ video: https://  <br>
 hola - hello   <br>
 uno - one    <br>
 
-Or after the ~ , it's the same and it won't be converted.  <br>
+Or after the ~ , it's the same and it won't be converted.  <br> <br>
+
+When the CSV file is made, go to Anki, because this is the file that you'll have to import. <br> Once in Anki click on Import File (Version 2.1.60) which is down at the bottom, the rightmost button. <br>
+A window will open, and from there go and choose the CSV file that you want. On the "Field separator" option choose "Comma", otherwise it will be a mess. Note that this CSV is used for basic notetypes.
